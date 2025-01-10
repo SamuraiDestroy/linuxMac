@@ -1,7 +1,7 @@
 # linuxMac
 A script to setup a linux partition on Macbooks.
 
-## Installation
+## Installing and Running
 Installing the script is as easy as possible, just click on the latest release on the right side of your screen and click on the first file to download it.
 Once the file is downloaded, (TODO)
 
