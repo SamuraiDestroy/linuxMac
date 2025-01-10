@@ -3,7 +3,7 @@ command -v brew >/dev/null 2>&1 || {
     zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
-brew install curl sudo
+brew install curl sudo git
 
 if [ "$1" == "fedora" ] || [ "$1" == "" ]; then
     echo "Installing fedora..."
