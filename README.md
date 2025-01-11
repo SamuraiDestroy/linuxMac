@@ -1,5 +1,5 @@
 # linuxMac
-A script to setup a linux partition on Macbooks.
+A script to setup a bootable linux partition on Macbooks.
 
 ## Installing and Running
 Installing the script is as easy as possible, just click on the latest release on the right side of your screen and click on the first file to download it.
@@ -19,10 +19,11 @@ Currently none.
 ### Apple Silicon
 Please note that the script currently does not work on M4 CPUs.
 
-Fedora is the only supported OS as of the 10th of January, 2025.
+Fedora is the only implemented distro as of the 10th of January, 2025.
 
 
 ## TODO list
+- Replace Asahi Fedora Builder with Fedora Asahi Remix (Fedora Builder is buggier apparently)
 - Add CPU detection
 - Add more distros
 - Linux partition size customisation
