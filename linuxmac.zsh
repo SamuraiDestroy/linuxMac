@@ -14,3 +14,6 @@ if [ "$1" == "fedora" ] || [ "$1" == "" ]; then
     cd ..
     sudo zsh fedora.sh
 fi
+
+
+# sysctl -a | grep machdep.cpu.vendor should find out if the cpu is intel or apple
