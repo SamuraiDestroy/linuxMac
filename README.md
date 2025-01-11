@@ -19,7 +19,7 @@ Currently none.
 ### Apple Silicon
 Please note that the script currently does not work on M4 CPUs.
 
-Fedora is the only supported OS as of the 10th of January, 2025.
+Fedora is the only implemented distro as of the 10th of January, 2025.
 
 
 ## TODO list
