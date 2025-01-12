@@ -13,14 +13,38 @@ if [[ $cpuHardware:l == *intel* ]]; then # This should return true if the CPU is
     echo "This script currently does not support Intel CPUs, please wait for a future release."
 else
     # Apple Silicon Distros
-    if [ "$1" == "fedora" ] || [ "$1" == "" ]; then
+    if [ "$1:l" == "fedora" ] || [ "$1" == "" ]; then
         echo "Installing fedora..."
         curl https://leifliddy.com/fedora.sh
         git clone https://github.com/leifliddy/asahi-fedora-builder.git
         cd asahi-fedora-builder
         sudo zsh build.sh
         cd ..
-        sudo zsh fedora.sh  
+        sudo zsh fedora.sh
+    elif [["$1:l" == "arch"]] then
+        echo "Arch is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "aosc"]] then
+        echo "AOSC is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "centos"]] then
+        echo "CentOS is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "debian"]] then
+        echo "Debian is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "deepin"]] then
+        echo "Deepin is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "fedora"]] then
+        echo "Fedora is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "gentoo"]] then
+        echo "Gentoo is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "nixos"]] then
+        echo "NoxOS is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "rocky linux"]] then
+        echo "Rocky Linux is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "ubuntu"]] then
+        echo "Ubuntu is currently not implemented, wait for a future release." 
+    elif [["$1:l" == "void linux"]] then
+        echo "Void Linux is currently not implemented, wait for a future release." 
+    else
+        echo "The distro you have selected currently does not support Apple Silicon and there are currently no plans to implement it." 
     fi
 fi
 
