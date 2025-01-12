@@ -25,6 +25,7 @@ else
         cd ..
         sudo zsh fedora.sh
         # Executes the files
+        # Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
     elif [["$1:l" == "arch"]] then
         echo "Arch is currently not implemented, wait for a future release." 
     elif [["$1:l" == "aosc"]] then
