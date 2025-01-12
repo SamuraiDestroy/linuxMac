@@ -2,25 +2,29 @@ command -v brew >/dev/null 2>&1 || {
     echo >&2 "Brew is not installed. Installing..."
     zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
+# Check if brew is installed, if it isn't, install it.
 
 brew install curl sudo git
 # Use brew to install necessary packages
 
 cpuHardware = sysctl -a | grep machdep.cpu.vendor
+# Finds your CPU vendor
 
 if [[ $cpuHardware:l == *intel* ]]; then # This should return true if the CPU is Intel, needs testing though.
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release."
 else
     # Apple Silicon Distros
-    if [ "$1:l" == "fedora" ] || [ "$1" == "" ]; then
+    if [ "$1:l" == "fedora" ] || [ "$1" == "" ]; then # Check if the first parameter is either fedora or left blank
         echo "Installing fedora..."
         curl https://leifliddy.com/fedora.sh
         git clone https://github.com/leifliddy/asahi-fedora-builder.git
-        cd asahi-fedora-builder
+        # Fetches necessary files for installation of Fedora
+        cd asahi-fedora-builder # Go to the downloaded files
         sudo zsh build.sh
         cd ..
         sudo zsh fedora.sh
+        # Executes the files
     elif [["$1:l" == "arch"]] then
         echo "Arch is currently not implemented, wait for a future release." 
     elif [["$1:l" == "aosc"]] then
