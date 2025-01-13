@@ -38,7 +38,7 @@ case "$cpuHardware:l" in
     elif [ "$1:l" = "rocky linux" ]; then
         echo "Rocky Linux is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "ubuntu" ]; then
-        echo "Ubuntu is currently not implemented, wait for a future release. Also, fuck you." 
+        echo "Ubuntu is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "void linux" ]; then
         echo "Void Linux is currently not implemented, wait for a future release." 
     else
