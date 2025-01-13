@@ -19,28 +19,43 @@ case "$cpuHardware:l" in
 	echo "Installing fedora..."
     curl https://alx.sh | sh
 	# Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
+    elif [ "$1:l" = "alpine linux" ]; then
+        #I need to watch the video about this one first
+        echo "Alpine Linux is currently not implemented, wait for a future release"
     elif [ "$1:l" = "arch" ]; then
-        echo "Arch is currently not implemented, wait for a future release." 
+        #echo "Arch is currently not implemented, wait for a future release." 
+        echo "This one requires stupid config stuff go to https://github.com/asahi-alarm/asahi-alarm/blob/main/manual-install.md and read about it after the installer is done."
+        curl -SL https://github.com/asahi-alarm/asahi-alarm/releases/download/installer/installer-bootstrap.sh | sh
     elif [ "$1:l" = "aosc" ]; then
-        echo "AOSC is currently not implemented, wait for a future release." 
+        #echo "AOSC is currently not implemented, wait for a future release." 
+        curl -sSf https://repo.aosc.io/get-oma.sh | sudo sh
     elif [ "$1:l" = "centos" ]; then
-        echo "CentOS is currently not implemented, wait for a future release." 
+        #echo "CentOS is currently not implemented, wait for a future release." 
+        echo "Root password for this is centosstream"
+        curl https://ecurtin.fedorapeople.org/centos.sh | sh
     elif [ "$1:l" = "debian" ]; then
+        #The Debian installer will ruin our lives.
         echo "Debian is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "deepin" ]; then
-        echo "Deepin is currently not implemented, wait for a future release." 
-    elif [ "$1:l" = "fedora" ]; then
-        echo "Fedora is currently not implemented, wait for a future release." 
+        #More research is necessary for this one since it's in a different language
+        echo "Deepin is currently not implemented, wait for a future release."  
     elif [ "$1:l" = "gentoo" ]; then
+        #After reading the guide, AAAAAAAAAAAAAA
         echo "Gentoo is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "nixos" ]; then
-        echo "NoxOS is currently not implemented, wait for a future release." 
+        #Later.
+        echo "NixOS is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "rocky linux" ]; then
-        echo "Rocky Linux is currently not implemented, wait for a future release." 
+        #echo "Rocky Linux is currently not implemented, wait for a future release." 
+        echo "Root password for this is rocky"
+        curl https://leifliddy.com/rocky.sh | sh
     elif [ "$1:l" = "ubuntu" ]; then
-        echo "Ubuntu is currently not implemented, wait for a future release." 
+        #echo "Ubuntu is currently not implemented, wait for a future release." 
+        curl -sL https://ubuntuasahi.org/install | sh
     elif [ "$1:l" = "void linux" ]; then
-        echo "Void Linux is currently not implemented, wait for a future release." 
+        #echo "Void Linux is currently not implemented, wait for a future release."
+        echo "Root password for this is voidlinux"
+        curl -L https://tinyurl.com/void-asahi | sh 
     else
         echo "The distro you have selected currently does not support Apple Silicon and there are currently no plans to implement it." 
     fi
