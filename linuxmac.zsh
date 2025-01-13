@@ -1,3 +1,7 @@
+if [ "$USER:l" = "djafar"]; then
+    echo "Hi Djafar"
+fi
+
 command brew >/dev/null 2>&1 || {
     echo >&2 "Brew is not installed. Installing..."
     zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -73,5 +77,3 @@ esac
        # cd ..
        # sudo zsh fedora.sh
        # Executes the files
- 
-#Hi Djafar
