@@ -49,8 +49,8 @@ case ("$cpuHardware:l" in
     elif [ "$1:l" = "void linux" ]; then
         echo "Void Linux is currently not implemented, wait for a future release." 
     else
-        echo "The distro you have selected currently does not support Apple Silicon (or you have misspelled the name) and there are currently no plans to implement it." 
-    fi ;;
+        echo "The distro you have selected currently does not support Apple Silicon and there are currently no plans to implement it." 
+    fi
 esac
 
 
