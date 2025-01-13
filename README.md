@@ -29,3 +29,4 @@ Fedora is the only implemented distro as of the 10th of January, 2025.
 - Linux partition size customisation
 - Comments (The people must learn.)
 - Auto install useful packages?
+- Issue template (I fear it will be more than necessary)
