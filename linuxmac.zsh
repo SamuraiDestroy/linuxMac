@@ -1,4 +1,4 @@
-command -v brew >/dev/null 2>&1 || {
+command brew >/dev/null 2>&1 || {
     echo >&2 "Brew is not installed. Installing..."
     zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
@@ -16,16 +16,9 @@ case ("$cpuHardware:l" in
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*)
     # Apple Silicon Distros
     if [ "$1:l" = "fedora" ] || [ "$1" = "" ]; then # Check if the first parameter is either fedora or left blank
-        echo "Installing fedora..."
-        curl https://leifliddy.com/fedora.sh
-        git clone https://github.com/leifliddy/asahi-fedora-builder.git
-        # Fetches necessary files for installation of Fedora
-        cd asahi-fedora-builder # Go to the downloaded files
-        sudo zsh build.sh
-        cd ..
-        sudo zsh fedora.sh
-        # Executes the files
-        # Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
+	echo "Installing fedora..."
+    curl https://alx.sh | sh
+	# Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
     elif [ "$1:l" = "arch" ]; then
         echo "Arch is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "aosc" ]; then
@@ -54,4 +47,15 @@ case ("$cpuHardware:l" in
 esac
 
 
-# sysctl -a | grep machdep.cpu.vendor should find out if the cpu is intel or apple (DO NOT GET RID OF THIS COMMENT UNTIL WE HAVE DETECTION WORKING)
+# sysctl -a | grep machdep.cpu.vendor should find out if the cpu is intel or apple (DO NOT GET RID OF THIS COMMENT UNTIL WE DEFINITELY HAVE DETECTION WORKING FOR BOTH CPU TYPES)
+
+# Old code for Fedora Builder
+       # curl https://leifliddy.com/fedora.sh
+       # git clone https://github.com/leifliddy/asahi-fedora-builder.git
+       # Fetches necessary files for installation of Fedora
+       # cd asahi-fedora-builder # Go to the downloaded files
+       # sudo zsh build.sh
+       # cd ..
+       # sudo zsh fedora.sh
+       # Executes the files
+ 
