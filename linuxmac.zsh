@@ -10,7 +10,7 @@ brew install curl git
 cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
 # Finds your CPU vendor
 
-case ("$cpuHardware:l" in
+case "$cpuHardware:l" in
     *"apple"*)
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*)
