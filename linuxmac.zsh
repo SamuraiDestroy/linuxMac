@@ -74,3 +74,4 @@ esac
        # sudo zsh fedora.sh
        # Executes the files
  
+#Hi Djafar
