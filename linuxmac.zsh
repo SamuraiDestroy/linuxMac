@@ -2,19 +2,15 @@ if [ "$USER:l" = *djafar*]; then
     echo "Hi Djafar"
 fi
 
-command brew >/dev/null 2>&1 || {
-    echo >&2 "Brew is not installed. Installing..."
-    zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-}
-# Check if brew is installed, if it isn't, install it.
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Just install brew bro trust
 
 brew install curl git
 # Use brew to install necessary packages
 
 cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
 # Finds your CPU vendor
-
-sudo -s
 
 case "$cpuHardware:l" in
     *"apple"*)
@@ -40,16 +36,16 @@ case "$cpuHardware:l" in
         echo "Root password for this is centosstream"
         curl https://ecurtin.fedorapeople.org/centos.sh | sh
     elif [ "$1:l" = "debian" ]; then
-        #The Debian installer needs to be tested outside of this script because the documentation for it might just be wrong.
+        # The Debian installer needs to be tested outside of this script because the documentation for it might just be wrong.
         echo "Debian is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "deepin" ]; then
-        #More research is necessary for this one since it's in a different language
+        # More research is necessary for this one since it's in a different language
         echo "Deepin is currently not implemented, wait for a future release."  
     elif [ "$1:l" = "gentoo" ]; then
-        #After reading the guide, AAAAAAAAAAAAAA
+        # After reading the guide, AAAAAAAAAAAAAA
         echo "Gentoo is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "nixos" ]; then
-        #Later.
+        # Later.
         echo "NixOS is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "rockylinux" ]; then
         #echo "Rocky Linux is currently not implemented, wait for a future release." 
@@ -63,7 +59,7 @@ case "$cpuHardware:l" in
         echo "Root password for this is voidlinux"
         curl -L https://tinyurl.com/void-asahi | sh 
     else
-        echo "The distro you have selected currently does not support Apple Silicon and there are currently no plans to implement it." 
+        echo "The distro you have selected currently does not support Apple Silicon (or you misspelled it) and there are currently no plans to implement it." 
     fi
 esac
 
