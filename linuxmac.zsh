@@ -25,7 +25,7 @@ case "$cpuHardware:l" in
 	echo "Installing fedora..."
     curl https://alx.sh | sh
 	# Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
-    elif [ "$1:l" = "alpine linux" ]; then
+    elif [ "$1:l" = "alpinelinux" ]; then
         #echo "Alpine Linux is currently not implemented, wait for a future release"
         curl https://arvanta.net/asahi/aai.sh | sh
     elif [ "$1:l" = "arch" ]; then
@@ -51,14 +51,14 @@ case "$cpuHardware:l" in
     elif [ "$1:l" = "nixos" ]; then
         #Later.
         echo "NixOS is currently not implemented, wait for a future release." 
-    elif [ "$1:l" = "rocky linux" ]; then
+    elif [ "$1:l" = "rockylinux" ]; then
         #echo "Rocky Linux is currently not implemented, wait for a future release." 
         echo "Root password for this is rocky"
         curl https://leifliddy.com/rocky.sh | sh
     elif [ "$1:l" = "ubuntu" ]; then
         #echo "Ubuntu is currently not implemented, wait for a future release." 
         curl -sL https://ubuntuasahi.org/install | sh
-    elif [ "$1:l" = "void linux" ]; then
+    elif [ "$1:l" = "voidlinux" ]; then
         #echo "Void Linux is currently not implemented, wait for a future release."
         echo "Root password for this is voidlinux"
         curl -L https://tinyurl.com/void-asahi | sh 
