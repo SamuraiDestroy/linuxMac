@@ -24,11 +24,11 @@ case "$cpuHardware:l" in
     curl https://alx.sh | sh
 	# Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
     elif [ "$1:l" = "alpine linux" ]; then
-        #I need to watch the video about this one first
-        echo "Alpine Linux is currently not implemented, wait for a future release"
+        #echo "Alpine Linux is currently not implemented, wait for a future release"
+        curl https://arvanta.net/asahi/aai.sh | sh
     elif [ "$1:l" = "arch" ]; then
         #echo "Arch is currently not implemented, wait for a future release." 
-        echo "This one requires stupid config stuff go to https://github.com/asahi-alarm/asahi-alarm/blob/main/manual-install.md and read about it after the installer is done."
+        echo "This one requires stupid config stuff go to https://github.com/asahi-alarm/asahi-alarm/blob/main/manual-install.md and read about it after the installer is done. (Just click the link and it should take you right there.)"
         curl -SL https://github.com/asahi-alarm/asahi-alarm/releases/download/installer/installer-bootstrap.sh | sh
     elif [ "$1:l" = "aosc" ]; then
         #echo "AOSC is currently not implemented, wait for a future release." 
@@ -38,7 +38,7 @@ case "$cpuHardware:l" in
         echo "Root password for this is centosstream"
         curl https://ecurtin.fedorapeople.org/centos.sh | sh
     elif [ "$1:l" = "debian" ]; then
-        #The Debian installer will ruin our lives.
+        #The Debian installer needs to be tested outside of this script because the documentation for it might just be wrong.
         echo "Debian is currently not implemented, wait for a future release." 
     elif [ "$1:l" = "deepin" ]; then
         #More research is necessary for this one since it's in a different language
