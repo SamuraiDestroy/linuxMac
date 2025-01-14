@@ -1,4 +1,4 @@
-if [ "$USER:l" = "djafar"]; then
+if [ "$USER:l" = *djafar*]; then
     echo "Hi Djafar"
 fi
 
@@ -13,6 +13,8 @@ brew install curl git
 
 cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
 # Finds your CPU vendor
+
+sudo -s
 
 case "$cpuHardware:l" in
     *"apple"*)
