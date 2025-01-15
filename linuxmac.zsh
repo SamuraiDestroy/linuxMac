@@ -1,6 +1,7 @@
-if [ "$USER:l" = *djafar* ]; then
-    echo "Hi Djafar"
-fi
+case "$USER:l" in
+    *"djafar"*)
+    echo "Hi Djafar" ;;*)
+esac
 # Hi Djafar.
 
 
