@@ -1,4 +1,4 @@
-if [ "$USER:l" = *djafar*]; then
+if [ "$USER:l" = *djafar* ]; then
     echo "Hi Djafar"
 fi
 # Hi Djafar.
