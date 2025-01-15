@@ -67,7 +67,6 @@ esac
 
 
 # sysctl -a | grep machdep.cpu.vendor should find out if the cpu is intel or apple (DO NOT GET RID OF THIS COMMENT UNTIL WE DEFINITELY HAVE DETECTION WORKING FOR BOTH CPU TYPES)
-# Apparently sudo -s works on mac?
 
 # Old code for Fedora Builder
        # curl https://leifliddy.com/fedora.sh
