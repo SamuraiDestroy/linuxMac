@@ -1,6 +1,7 @@
 if [ "$USER:l" = *djafar*]; then
     echo "Hi Djafar"
 fi
+# Hi Djafar.
 
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
