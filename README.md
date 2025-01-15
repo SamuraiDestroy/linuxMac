@@ -25,10 +25,8 @@ Fedora is the only implemented distro as of the 10th of January, 2025.
 
 
 ## TODO list
-- Replace Asahi Fedora Builder with Fedora Asahi Remix (Fedora Builder is buggier apparently)
-- Add CPU detection
 - Add more distros
-- Linux partition size customisation
+- Linux partition size customisation (This would probably only be for the Intel distros since Asahi already lets you customise it.)
 - Comments (The people must learn.)
 - Auto install useful packages?
 - Issue template (I fear it will be more than necessary)
