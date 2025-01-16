@@ -6,7 +6,7 @@ esac
 
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# Just install brew bro trust
+# Just installs/updates brew bro trust
 
 brew install curl git
 # Use brew to install necessary packages
