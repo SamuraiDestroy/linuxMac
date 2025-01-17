@@ -67,13 +67,3 @@ esac
 
 
 # sysctl -a | grep machdep.cpu.vendor should find out if the cpu is intel or apple (DO NOT GET RID OF THIS COMMENT UNTIL WE DEFINITELY HAVE DETECTION WORKING FOR BOTH CPU TYPES)
-
-# Old code for Fedora Builder
-       # curl https://leifliddy.com/fedora.sh
-       # git clone https://github.com/leifliddy/asahi-fedora-builder.git
-       # Fetches necessary files for installation of Fedora
-       # cd asahi-fedora-builder # Go to the downloaded files
-       # sudo zsh build.sh
-       # cd ..
-       # sudo zsh fedora.sh
-       # Executes the files
