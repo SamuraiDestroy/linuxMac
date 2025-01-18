@@ -22,5 +22,8 @@ If applicable, add screenshots to help explain your problem.
 **CPU Manufacturer**
 Either Apple or Intel
 
+**Script Version**
+This will be the title of the release you downloaded the script from
+
 **Additional context**
 Add any other context about the problem here.
