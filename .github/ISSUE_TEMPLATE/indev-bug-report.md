@@ -1,8 +1,8 @@
 ---
-name: Bug Report
-about: Create a report to help us improve
+name: Indev Bug Report
+about: Bug reports for the non-release versions of the script
 title: ''
-labels: bug, indev, stable
+labels: bug, indev
 assignees: ''
 
 ---
