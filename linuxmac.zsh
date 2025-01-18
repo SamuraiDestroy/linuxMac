@@ -13,6 +13,7 @@ brew install curl git
 
 cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
 # Finds your CPU vendor
+# We need to test this more.
 
 case "$cpuHardware:l" in
     *"apple"*)
@@ -20,12 +21,12 @@ case "$cpuHardware:l" in
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*)
     # Apple Silicon Distros
     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
-    read distro
-    if [ "$distro:l" = "fedora" ]; then # Check if the first parameter is either fedora or left blank
+    read distro # Get user input of what distro they want to use
+    if [ "$distro:l" = "fedora" ]; then # Check if the first parameter is fedora
 	echo "Installing fedora..."
     curl https://alx.sh | sh
 	# Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
-    elif [ "$distro:l" = "alpinelinux" ]; then
+    elif [ "$distro:l" = "alpinelinux" ]; then # This does not work, we need to fix (maybe just use case again lol)
         #echo "Alpine Linux is currently not implemented, wait for a future release"
         curl https://arvanta.net/asahi/aai.sh | sh
     elif [ "$distro:l" = "arch" ]; then
