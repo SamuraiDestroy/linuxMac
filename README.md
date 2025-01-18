@@ -10,7 +10,7 @@ In case you want to install something other than fedora, you may enter the termi
 
 If the program asks for your password, enter your user password (the one you use to enter your computer).
 
-It's recommended to not download the zsh file direct from the repo as it may be an unstable development version.
+It's recommended to not download the zsh file direct from the repo as it will likely be an unstable development version.
 
 ## What does this script do?
 This script installs linux onto your mac, with a single click (and some typing in your password). It is not a virus (please trust us here).
