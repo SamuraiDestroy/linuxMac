@@ -22,6 +22,7 @@ case "$cpuHardware:l" in
     if [ "$1:l" = "fedora" ] || [ "$1" = "" ]; then # Check if the first parameter is either fedora or left blank
 	echo "Installing fedora..."
     curl https://alx.sh | sh
+    echo "Restart your computer to swap to Fedora (You will still have macOS)."
     else
         echo "The distro you have selected currently has not been fully implemented into this script." 
     fi
