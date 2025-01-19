@@ -18,8 +18,9 @@ cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
 case "$cpuHardware:l" in
     *"apple"*)
     # Intel Distros
-    echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*)
+    echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*) 
     # Apple Silicon Distros
+    # Also pretty sure this runs the apple silicon code after running the intel code and thats not le good. Still not confident it works.
     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
     read distro # Get user input of what distro they want to use
     if [ "$distro:l" = "fedora" ]; then # Check if the first parameter is fedora
