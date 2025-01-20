@@ -29,4 +29,4 @@ Fedora is the only implemented distro as of the 15th of January, 2025.
 - Linux partition size customisation (This would probably only be for the Intel distros since Asahi already lets you customise it.)
 - Comments (The people must learn.)
 - Auto install useful packages?
-- Switch from parameters to input from script (This will make it easier for people to use)
+- More output stuff so people know what's going on
