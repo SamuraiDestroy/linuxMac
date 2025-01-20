@@ -30,3 +30,4 @@ Fedora is the only implemented distro as of the 15th of January, 2025.
 - Comments (The people must learn.)
 - Auto install useful packages?
 - More output stuff so people know what's going on
+- Github wiki???? I think it would be good for helping people with what to do after installing Linux
