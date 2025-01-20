@@ -2,7 +2,7 @@
 name: Stable Bug Report
 about: Bug reports for release builds of the script
 title: ''
-labels: bug, stable
+labels: fix, stable
 assignees: ''
 
 ---
