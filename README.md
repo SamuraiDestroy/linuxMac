@@ -17,11 +17,13 @@ This script installs linux onto your mac, with a single click (and some typing i
 
 ## Supported Linux distros
 ### Intel
-Currently none.
+Currently none. Likely won't be added for a while.
 ### Apple Silicon
 Please note that the script currently does not work on M4 CPUs.
 
-Fedora is the only implemented distro as of the 15th of January, 2025.
+- Fedora
+
+More distros to be fully implemented in the future.
 
 
 ## TODO list
