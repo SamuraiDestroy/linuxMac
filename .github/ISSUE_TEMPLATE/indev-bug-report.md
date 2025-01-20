@@ -2,7 +2,7 @@
 name: Indev Bug Report
 about: Bug reports for the non-release versions of the script
 title: ''
-labels: bug, indev
+labels: fix, indev
 assignees: ''
 
 ---

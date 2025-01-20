@@ -2,7 +2,7 @@
 name: Feature Request
 about: Suggest a feature to add
 title: ''
-labels: enhancement
+labels: feat
 assignees: ''
 
 ---
