@@ -21,7 +21,7 @@ case "$cpuHardware:l" in
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*) 
     # Apple Silicon Distros
-    echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
+    echo "(Case sensitive) Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
     read distro # Get user input of what distro they want to use
     case $distro in 
     "fedora") 
