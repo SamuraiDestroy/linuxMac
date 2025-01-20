@@ -15,20 +15,19 @@ cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
 # Finds your CPU vendor
 # We need to test this more.
 
-case "$cpuHardware:l" in
+case ${cpuHardware,,} in
     *"apple"*)
-    # THIS CASE DOES NOT WORK BECAUSE OF THE :l
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*) 
     # Apple Silicon Distros
-    echo "(Case sensitive) Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
+    echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
     read distro # Get user input of what distro they want to use
-    case $distro in 
+    case ${distro,,} in 
     "fedora") 
     # Check if the first parameter is fedora
 	echo "Installing fedora..."
     curl https://alx.sh | sh ;;
-	# Below this is the switch statement for all distros that can be run on Apple Silicon CPUs, even though they are unimplemented.
+	# More distro checking haha
     "alpinelinux"*)
         #echo "Alpine Linux is currently not implemented, wait for a future release"
         curl https://arvanta.net/asahi/aai.sh | sh ;;
