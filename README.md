@@ -10,18 +10,20 @@ In case you want to install something other than fedora, you may enter the termi
 
 If the program asks for your password, enter your user password (the one you use to enter your computer).
 
-It's recommended to not download the zsh file direct from the repo as it may be an unstable development version.
+It's recommended to not download the zsh file direct from the repo as it will likely be an unstable development version.
 
 ## What does this script do?
 This script installs linux onto your mac, with a single click (and some typing in your password). It is not a virus (please trust us here).
 
 ## Supported Linux distros
 ### Intel
-Currently none.
+Currently none. Likely won't be added for a while.
 ### Apple Silicon
 Please note that the script currently does not work on M4 CPUs.
 
-Fedora is the only implemented distro as of the 10th of January, 2025.
+- Fedora
+
+More distros to be fully implemented in the future.
 
 
 ## TODO list
@@ -29,4 +31,6 @@ Fedora is the only implemented distro as of the 10th of January, 2025.
 - Linux partition size customisation (This would probably only be for the Intel distros since Asahi already lets you customise it.)
 - Comments (The people must learn.)
 - Auto install useful packages?
-- Issue template (I fear it will be more than necessary)
+- More output stuff so people know what's going on
+- Github wiki???? I think it would be good for helping people with what to do after installing Linux
+
