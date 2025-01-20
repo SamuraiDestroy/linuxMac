@@ -26,7 +26,8 @@ case ${cpuHardware,,} in
     "fedora") 
     # Check if the first parameter is fedora
 	echo "Installing fedora..."
-    curl https://alx.sh | sh ;;
+    curl https://alx.sh | sh 
+    echo "Restart your computer to swap to Fedora (You will still have macOS)." ;;
 	# More distro checking haha
     "alpinelinux"*)
         #echo "Alpine Linux is currently not implemented, wait for a future release"
