@@ -29,7 +29,7 @@ More distros to be fully implemented in the future.
 ## TODO list
 - Add more distros
 - Linux partition size customisation (This is only necessary for the Intel distros since Asahi already lets you customise it.)
-- Comments (The people must learn.)
 - Auto install useful packages? (Research if we can do this or not)
 - More output stuff so people know what's going on
 - Github wiki???? I think it would be good for helping people with what to do after installing Linux
+- Turn the script into a package??? This would probably give us better output control but it'd be harder for people who are afraid of terminals to use.
