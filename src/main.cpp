@@ -10,6 +10,15 @@
     #define PLATFORM "x86"
 #endif           
 
+// todo: add this stuff
+// bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+// # Just installs/updates brew bro trust
+
+// brew install curl git
+// # Use brew to install necessary packages
+
+// cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
+
 int main(int argc, char *argv[]) {
     info("initializing the " + std::string(PLATFORM) + " build of ldm");
 
