@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include "utils/Output.h"
 #include "utils/Distro.h"
-using namespace std;
 
 #ifdef __arm__
     #define PLATFORM "arm"
