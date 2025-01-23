@@ -47,8 +47,9 @@ case ${cpuHardware,,} in
         # The Debian installer needs to be tested outside of this script because the documentation for it might just be wrong.
         echo "Debian is currently not implemented, wait for a future release." ;;
     "deepin"*)
+        #echo "Deepin is currently not implemented, wait for a future release." 
         # More research is necessary for this one since it's in a different language
-        echo "Deepin is currently not implemented, wait for a future release." ;;
+        curl https://ci.deepin.com/repo/deepin/deepin-ports/deepin-m1/deepin.install | sh;;
     "gentoo"*)
         # After reading the guide, AAAAAAAAAAAAAA
         echo "Gentoo is currently not implemented, wait for a future release." ;;
