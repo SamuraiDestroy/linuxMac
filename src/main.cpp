@@ -10,17 +10,25 @@
     #define PLATFORM "x86"
 #endif           
 
-// todo: add this stuff
-// bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-// # Just installs/updates brew bro trust
-
-// brew install curl git
-// # Use brew to install necessary packages
-
-// cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
-
 int main(int argc, char *argv[]) {
     info("initializing the " + std::string(PLATFORM) + " build of ldm");
+    info("checking if brew is installed");
+
+    // check if brew is installed
+    int is_brew_installed = system("command -v brew > /dev/null 2>&1");
+
+    if (is_brew_installed != 0) { // command failed
+        info("installing brew...");
+        // int brew_install_status = system("bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"");
+        int brew_install_status = 0; // for testing without installing stuff
+        if (brew_install_status) {
+            fail("brew install failure, please open an issue on github for more help");
+            return 1;
+        }
+        success("brew install success");
+    } else  info("brew has already been installed");
+
+    std::cout << std::endl;
 
     // check for this syntax: ____ install _____
     if (argc > 2 && strcmp(argv[1], "install") == 0) {
