@@ -11,7 +11,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 brew install curl git
 # Use brew to install necessary packages
 
-cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
+cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 # Finds your CPU vendor
 # THIS DOES NOT WORK
 
