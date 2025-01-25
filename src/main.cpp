@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
     if (is_brew_installed != 0) { // command failed
         info("installing brew...");
-        // int brew_install_status = system("bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"");
+        int brew_install_status = system("bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"");
         int brew_install_status = 0; // for testing without installing stuff
         if (brew_install_status) {
             fail("brew install failure, please open an issue on github for more help");
@@ -104,7 +104,7 @@ int main(int argc, char *argv[]) {
             success("package found successfully, installing...");
             info("running install script");
 
-            // int ret = system(install_script.c_str()); 
+            int ret = system(install_script.c_str()); 
             int ret = 0; // for temp testing w/o install script
 
             if (!ret) { // if ret == 0, success
