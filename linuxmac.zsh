@@ -11,19 +11,28 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 brew install curl git
 # Use brew to install necessary packages
 
-cpuHardware=$(sysctl -a | grep machdep.cpu.vendor)
+cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 # Finds your CPU vendor
 
-case "$cpuHardware:l" in
+case ${cpuHardware,,} in
     *"apple"*)
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*)
     # Apple Silicon Distros
-    if [ "$1:l" = "fedora" ] || [ "$1" = "" ]; then # Check if the first parameter is either fedora or left blank
-	echo "Installing fedora..."
-    curl https://alx.sh | sh
-    echo "Restart your computer to swap to Fedora (You will still have macOS)."
-    else
-        echo "The distro you have selected currently has not been fully implemented into this script." 
-    fi
+     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
+    read distro # Get user input of what distro they want to use
+    case ${distro,,} in 
+    "fedora") 
+    # Check if the first parameter is fedora
+	    echo "Installing fedora..."
+        curl https://alx.sh | sh 
+        echo "Fedora has now been fully configured." ;;
+	    # More distro checking haha
+    "alpinelinux"*)
+        #echo "Alpine Linux is currently not implemented, wait for a future release"
+        echo "The default user for this is root"
+        curl https://arvanta.net/asahi/aai.sh | sh ;;
+    *)
+        echo "The distro you have selected currently does not support Apple Silicon (or you misspelled it) and there are currently no plans to implement it." ;;
+    esac
 esac
