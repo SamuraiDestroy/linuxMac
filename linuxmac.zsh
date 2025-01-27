@@ -10,7 +10,7 @@ devmode=false
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Just installs/updates brew bro trust
 
-brew install curl git
+brew install curl git zsh
 # Use brew to install necessary packages
 
 cpuHardware=$(sysctl -n machdep.cpu.brand_string)
