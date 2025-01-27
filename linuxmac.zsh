@@ -15,7 +15,7 @@ cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 # Finds your CPU vendor
 
 case ${cpuHardware,,} in
-    *"apple"*)
+    *"intel"*)
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*)
     # Apple Silicon Distros
