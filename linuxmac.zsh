@@ -4,6 +4,8 @@ case "$USER:l" in
 esac
 # Hi Djafar.
 
+devmode=false
+#You didn't see this.
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Just installs/updates brew bro trust
@@ -18,17 +20,27 @@ cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 case ${cpuHardware,,} in
     *"intel"*)
     # Intel Distros
-    echo "This script currently does not support Intel CPUs, please wait for a future release." ;;*) 
+    echo "This script currently does not support Intel CPUs, please wait for a future release."
+    if [ $devmode ]; then # Executes if dev mode is on since this is probably not very safe to test
+        diskutil list
+        # Show all the disks and info
+        echo "Choose a disk to to install Linux on (Type the identifier next to it and press enter): "
+        read disk
+        # Get the disk to use from user input
+        echo "How much space should be allocated to Linux (in GB): "
+        read size
+        # Get disk space to use from user input
+    fi ;;*)
     # Apple Silicon Distros
     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
     read distro # Get user input of what distro they want to use
     case ${distro,,} in 
     "fedora") 
     # Check if the first parameter is fedora
-	echo "Installing fedora..."
-    curl https://alx.sh | sh 
-    echo "Fedora has now been fully configured." ;;
-	# More distro checking haha
+	    echo "Installing fedora..."
+        curl https://alx.sh | sh 
+        echo "Fedora has now been fully configured." ;;
+	    # More distro checking haha
     "alpinelinux"*)
         #echo "Alpine Linux is currently not implemented, wait for a future release"
         curl https://arvanta.net/asahi/aai.sh | sh ;;
