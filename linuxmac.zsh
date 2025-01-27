@@ -15,7 +15,6 @@ brew install curl git
 
 cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 # Finds your CPU vendor
-# THIS DOES NOT WORK
 
 case ${cpuHardware,,} in
     *"intel"*)
