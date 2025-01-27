@@ -42,7 +42,7 @@ case ${cpuHardware,,} in
 	    # More distro checking haha
     "alpinelinux"*)
         #echo "Alpine Linux is currently not implemented, wait for a future release"
-        echo "The root password for this is (Not found yet)"
+        echo "The default user for this is root"
         curl https://arvanta.net/asahi/aai.sh | sh ;;
     "arch"*)
         #echo "Arch is currently not implemented, wait for a future release." 
