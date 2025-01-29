@@ -30,9 +30,8 @@ More distros to be fully implemented in the future.
 - Add more distros
 - Linux partition size customisation (This is only necessary for the Intel distros since Asahi already lets you customise it.)
 - Auto install useful packages? (Research if we can do this or not)
-- More output stuff so people know what's going on
+- A little more output stuff so people know what's going on
 - Github wiki???? I think it would be good for helping people with what to do after installing Linux
-- Turn the script into a package??? This would probably give us better output control but it'd be harder for people who are afraid of terminals to use.
+- Turn the script into a package??? This would probably give us better output control but it'd be harder for people who are afraid of terminals to use. (Almost done I think)
 - Github pages website to make it easier for people to understand??
 - Expand to other platforms (This will also require renaming, I suggest LPM)
-- Merge C++ branch to main once ready
