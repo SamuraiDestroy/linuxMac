@@ -1,3 +1,7 @@
+#include <string>
+#include <algorithm>
+#include <unordered_map>
+
 enum class Distro {
     FEDORA,
     ALPINELINUX,
@@ -14,14 +18,14 @@ enum class Distro {
     UNKNOWN  // For unsupported or unrecognized distros
 };
 
-std::string toLower(const std::string& str) {
+inline std::string toLower(const std::string& str) {
     std::string result = str;
     std::transform(result.begin(), result.end(), result.begin(), ::tolower);
     return result;
 }
 
 // Function to map string to enum
-Distro stringToDistro(const std::string& input) {
+inline Distro stringToDistro(const std::string& input) {
     static const std::unordered_map<std::string, Distro> distroMap = {
         {"fedora", Distro::FEDORA},
         {"alpinelinux", Distro::ALPINELINUX},
@@ -45,7 +49,7 @@ Distro stringToDistro(const std::string& input) {
     }
 }
 
-std::string distroToString(Distro distro) {
+inline std::string distroToString(Distro distro) {
     switch (distro) {
         case Distro::FEDORA: return "Fedora";
         case Distro::ALPINELINUX: return "AlpineLinux";
