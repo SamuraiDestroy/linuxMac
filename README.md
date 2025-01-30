@@ -36,3 +36,4 @@ More distros to be fully implemented in the future.
 - Github pages website to make it easier for people to understand??
 - Expand to other platforms (This will also require renaming, I suggest LPM)
 - More comments because someone forgot to add them
+- (C++ only) Change from parameter to user input
