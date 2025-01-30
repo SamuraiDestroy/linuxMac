@@ -35,3 +35,4 @@ More distros to be fully implemented in the future.
 - Turn the script into a package??? This would probably give us better output control but it'd be harder for people who are afraid of terminals to use. (Almost done I think)
 - Github pages website to make it easier for people to understand??
 - Expand to other platforms (This will also require renaming, I suggest LPM)
+- More comments because someone forgot to add them
