@@ -12,6 +12,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 
 brew install curl git zsh
 # Use brew to install necessary packages
+# If updating zsh this way doesn't work try using the Djafar Case syntax in the other cases
 
 cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 # Finds your CPU vendor
