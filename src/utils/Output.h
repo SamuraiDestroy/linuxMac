@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 #define RESET "\033[0m"
 
@@ -31,7 +32,7 @@ enum class Prop {
     Dim,
 };
 
-std::string getAnsiCode(Prop prop) {
+inline std::string getAnsiCode(Prop prop) {
     switch (prop) {
         case Prop::Bold:            return "\033[1m";
         case Prop::Dim:             return "\033[2m";
@@ -42,7 +43,7 @@ std::string getAnsiCode(Prop prop) {
 }
 
 // Function to get the ANSI escape code for each color
-std::string getAnsiCode(Color color) {
+inline std::string getAnsiCode(Color color) {
     switch (color) {
         case Color::Black:         return "\033[30m"; // Black
         case Color::Red:           return "\033[31m"; // Red
@@ -93,28 +94,28 @@ class ColoredStr {
         bool bold;
 };
 
-void info (std::string out) {
+inline void info (std::string out) {
     ColoredStr tag("[   info   ]\t");
     tag += Prop::Bold;
 
     std::cout << tag.color_as_string(Color::Blue) << " " << out << std::endl;
 }
 
-void success (std::string out) {
+inline void success (std::string out) {
     ColoredStr tag("[   good   ]\t");
     tag += Prop::Bold;
 
     std::cout << tag.color_as_string(Color::Green) << " " << out << std::endl;
 }
 
-void warn (std::string out) {
+inline void warn (std::string out) {
     ColoredStr tag("[   warn   ]\t");
     tag += Prop::Bold;
 
     std::cout << tag.color_as_string(Color::Yellow) << " " << out << std::endl;
 }
 
-void fail (std::string out) {
+inline void fail (std::string out) {
     ColoredStr tag("[   fail   ]\t");
     tag += Prop::Bold;
 
