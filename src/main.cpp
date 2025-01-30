@@ -9,15 +9,16 @@
     #define PLATFORM "arm"
 #else
     #define PLATFORM "x86"
-#endif           
+#endif   
+// Get CPU platform        
 
 int main(int argc, char *argv[]) {
     // Add some kind of like intro statement here just to look nice (should prob also have the link to the github)
     info("initializing the " + std::string(PLATFORM) + " build of ldm");
     info("checking if brew is installed");
 
-    // check if brew is installed
     int is_brew_installed = system("command -v brew > /dev/null 2>&1");
+    // Check if brew is installed
 
     if (is_brew_installed != 0) { // command failed
         info("installing brew...");

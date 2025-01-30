@@ -2,8 +2,8 @@
 #include <iostream>
 
 #define RESET "\033[0m"
+// TODO: explain this
 
-// Enum for colors
 enum class Color {
     Black,
     Red,
@@ -23,6 +23,7 @@ enum class Color {
     BrightWhite,
     Reset,
 };
+// Enum for colors
 
 enum class Prop {
     Bold,
@@ -31,6 +32,7 @@ enum class Prop {
     Strikethrough,
     Dim,
 };
+// Enum for formatting
 
 inline std::string getAnsiCode(Prop prop) {
     switch (prop) {
@@ -41,8 +43,8 @@ inline std::string getAnsiCode(Prop prop) {
         case Prop::Strikethrough:   return "\033[9m";
     }
 }
+// TODO: explain this
 
-// Function to get the ANSI escape code for each color
 inline std::string getAnsiCode(Color color) {
     switch (color) {
         case Color::Black:         return "\033[30m"; // Black
@@ -64,16 +66,21 @@ inline std::string getAnsiCode(Color color) {
         default:                   return "\033[0m";  // Reset
     }
 }
+// Function to get the ANSI escape code for each color
 
 class ColoredStr {
     public:
         ColoredStr (std::string raw_str) {
             this->str = raw_str;
         }
+        // TODO: explain this
+
 
         void operator+=(Prop prop) {
             this->str = getAnsiCode(prop) + this->str;
         }
+        // TODO: explain this
+
 
         // std::string operator+=(Prop props[]) {
         //     std::string res;
@@ -88,11 +95,17 @@ class ColoredStr {
         std::string color_as_string(Color color) {
             return getAnsiCode(color) + str + RESET;
         }
+        // TODO: explain this
+
 
     private: 
         std::string str;
         bool bold;
+        // TODO: explain this
+
 };
+// TODO: summarise this
+
 
 inline void info (std::string out) {
     ColoredStr tag("[   info   ]\t");
@@ -100,6 +113,8 @@ inline void info (std::string out) {
 
     std::cout << tag.color_as_string(Color::Blue) << " " << out << std::endl;
 }
+// TODO: explain this
+
 
 inline void success (std::string out) {
     ColoredStr tag("[   good   ]\t");
@@ -107,6 +122,8 @@ inline void success (std::string out) {
 
     std::cout << tag.color_as_string(Color::Green) << " " << out << std::endl;
 }
+// TODO: explain this
+
 
 inline void warn (std::string out) {
     ColoredStr tag("[   warn   ]\t");
@@ -114,6 +131,8 @@ inline void warn (std::string out) {
 
     std::cout << tag.color_as_string(Color::Yellow) << " " << out << std::endl;
 }
+// TODO: explain this
+
 
 inline void fail (std::string out) {
     ColoredStr tag("[   fail   ]\t");
@@ -121,3 +140,4 @@ inline void fail (std::string out) {
 
     std::cout << tag.color_as_string(Color::Red) << " " << out << std::endl;
 }
+// TODO: explain this

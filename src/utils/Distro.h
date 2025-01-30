@@ -17,14 +17,15 @@ enum class Distro {
     VOIDLINUX,
     UNKNOWN  // For unsupported or unrecognized distros
 };
+// List of distros
 
 inline std::string toLower(const std::string& str) {
     std::string result = str;
     std::transform(result.begin(), result.end(), result.begin(), ::tolower);
     return result;
 }
+// TOODO: explain what the hell is going on here
 
-// Function to map string to enum
 inline Distro stringToDistro(const std::string& input) {
     static const std::unordered_map<std::string, Distro> distroMap = {
         {"fedora", Distro::FEDORA},
@@ -47,7 +48,9 @@ inline Distro stringToDistro(const std::string& input) {
     } else {
         return Distro::UNKNOWN;
     }
+    // TODO: explain this little thing too
 }
+// Function to map string to enum
 
 inline std::string distroToString(Distro distro) {
     switch (distro) {
@@ -66,3 +69,4 @@ inline std::string distroToString(Distro distro) {
         default: return "Unknown";
     }
 }
+// Function to map enum to string
