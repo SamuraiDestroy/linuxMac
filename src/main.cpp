@@ -12,6 +12,7 @@
 #endif           
 
 int main(int argc, char *argv[]) {
+    // Add some kind of like intro statement here just to look nice (should prob also have the link to the github)
     info("initializing the " + std::string(PLATFORM) + " build of ldm");
     info("checking if brew is installed");
 
@@ -50,6 +51,7 @@ int main(int argc, char *argv[]) {
                 install_script = "curl https://alx.sh | sh";
                 break;
             case Distro::ALPINELINUX:
+                extra_info += "The default user for this is root\n";
                 install_script = "curl https://arvanta.net/asahi/aai.sh | sh";
                 break;
             case Distro::ARCH: 
