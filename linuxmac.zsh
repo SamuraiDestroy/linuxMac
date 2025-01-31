@@ -38,11 +38,11 @@ case ${cpuHardware,,} in
     read distro # Get user input of what distro they want to use
     case ${distro,,} in 
     "fedora") 
-    # Check if the first parameter is fedora
+    # Check if the user input is fedora
 	    echo "Installing fedora..."
         curl https://alx.sh | sh 
         echo "Fedora has now been fully configured." ;;
-	    # More distro checking haha
+	# More distro checking haha
     "alpinelinux"*)
         #echo "Alpine Linux is currently not implemented, wait for a future release"
         echo "The default user for this is root"
