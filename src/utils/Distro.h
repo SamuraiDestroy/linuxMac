@@ -24,7 +24,7 @@ inline std::string toLower(const std::string& str) {
     std::transform(result.begin(), result.end(), result.begin(), ::tolower);
     return result;
 }
-// TOODO: explain what the hell is going on here
+// TODO: explain what the hell is going on here
 
 inline Distro stringToDistro(const std::string& input) {
     static const std::unordered_map<std::string, Distro> distroMap = {
