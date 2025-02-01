@@ -1,8 +1,7 @@
 case "$USER:l" in
     *"djafar"*)
     echo "Hi Djafar"
-    sleep 0.5
-    ;;*)
+    sleep 0.5 ;;*)
 esac
 # Hi Djafar.
 
