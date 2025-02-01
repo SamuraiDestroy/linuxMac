@@ -38,3 +38,4 @@ More distros to be fully implemented in the future.
 - More comments because someone forgot to add them
 - (C++ only) Change from parameter to user input
 - Post install config (Only for some distros)
+- The way we use curl is apparently a security vulnerability and we should fix that
