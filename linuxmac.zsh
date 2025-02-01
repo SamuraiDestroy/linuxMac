@@ -42,9 +42,8 @@ case ${cpuHardware,,} in
 	    echo "Installing fedora..."
         curl https://alx.sh | sh 
         echo "Fedora has now been fully configured." ;;
-	# More distro checking haha
+	# More distro checking below this haha
     "alpinelinux"*)
-        #echo "Alpine Linux is currently not implemented, wait for a future release"
         echo "The default user for this is root"
         curl https://arvanta.net/asahi/aai.sh | sh ;;
     "arch"*)

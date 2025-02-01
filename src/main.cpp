@@ -24,27 +24,32 @@ int main(int argc, char *argv[]) {
         info("installing brew...");
         int brew_install_status = system("bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"");
         brew_install_status = 0; // for testing without installing stuff
+        // Installs brew
         if (brew_install_status) {
             fail("brew install failure, please open an issue on github for more help");
             return 1;
         }
+        // If brew fails to install
         success("brew install success");
     } else  info("brew has already been installed");
 
     std::cout << std::endl;
+    // TODO: explain this
 
     // check for this syntax: ____ install _____
-    if (argc > 2 && strcmp(argv[1], "install") == 0) {
+    if (argc > 2 && strcmp(argv[1], "install") == 0) { // TODO: explain this
 
         // find package name
         ColoredStr pkg (argv[2]);
         pkg += Prop::Bold;
+        // TODO: explain this
 
         info("installing package " + pkg.color_as_string(Color::BrightMagenta) + "...");
 
         bool distro_is_impl = true;
         std::string install_script;
         std::string extra_info;
+        // TODO: explain this
 
         switch (stringToDistro(argv[2])) {
             // switch distro
@@ -95,20 +100,22 @@ int main(int argc, char *argv[]) {
                     pkg += Prop::Underline;
                     fail("package " + pkg.color_as_string(Color::BrightMagenta) + " was not found, and is not planned for future releases. for more help, please open an issue on our github page");
                 }
-        }
+        } // Distro conditions
 
         ColoredStr fmtDistro(distroToString(stringToDistro(argv[2])));
+        // TODO: explain this
         
         if (!distro_is_impl) {
             fmtDistro += Prop::Dim;
             fmtDistro += Prop::Underline;
             warn(fmtDistro.color_as_string(Color::BrightMagenta) + " is currently not implemented, wait for a future release");
-        }
+        } // Unimplemented distros
         if (install_script.size() > 0) {
             success("package found successfully, installing...");
             info("running install script");
 
             int ret = system(install_script.c_str()); 
+            // Run install script
             ret = 0; // for temp testing w/o install script
 
             if (!ret) { // if ret == 0, success
@@ -116,10 +123,11 @@ int main(int argc, char *argv[]) {
                 success("ran install successfully");
                 success("distro " + fmtDistro.color_as_string(Color::BrightMagenta) + " installed");
                 if (extra_info.size() > 0)  info(extra_info);
+                // Installer success
             } else {
                 ColoredStr errorCode(std::to_string(ret));
                 fail("failed to execute install script with error code of " + errorCode.color_as_string(Color::BrightCyan));
-            }
+            } // Installer fail
         }
     }
 }
