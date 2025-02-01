@@ -28,7 +28,7 @@ case $cpuHardware in
     *"intel"*)
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release."
-    if [ $devmode ]; then # Executes if dev mode is on since this is probably not very safe to test
+    if [ $devmode = true ]; then # Executes if dev mode is on since this is probably not very safe to test
         diskutil list
         # Show all the disks and info
         echo "Choose a disk to to install Linux on (Type the identifier next to it and press enter): "
@@ -78,14 +78,14 @@ case $cpuHardware in
     "gentoo"*)
         # After reading the guide, AAAAAAAAAAAAAA
         echo "Gentoo is currently not implemented, wait for a future release." 
-        if [ $devmode ]; then
+        if [ $devmode = true ]; then
             echo "You need a USB stick plugged in for this one"
             sleep 1.5
         fi ;;
     "nixos"*)
         # Later.
         echo "NixOS is currently not implemented, wait for a future release." 
-        if [ $devmode ]; then
+        if [ $devmode = true ]; then
             echo "You need a USB stick plugged in for this one"
             sleep 1.5
             git clone https://github.com/tpwrules/nixos-apple-silicon/
