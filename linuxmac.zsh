@@ -82,6 +82,13 @@ case $cpuHardware in
         echo "NixOS is currently not implemented, wait for a future release." 
         if [ $devmode ]; then
             echo "You need a USB stick plugged in for this one"
+            git clone https://github.com/tpwrules/nixos-apple-silicon/
+            cd nixos-apple-silicon
+            nix build --extra-experimental-features 'nix-command flakes' .#m1n1 -o m1n1
+            nix build --extra-experimental-features 'nix-command flakes' .#uboot-asahi -o u-boot
+            nix build --extra-experimental-features 'nix-command flakes' .#installer-bootstrap -o installer -j4 -L
+            curl https://alx.sh | sh
+            # From here it gets pretty complicated and I'll do it later
         fi;;
     "rockylinux"*)
         #echo "Rocky Linux is currently not implemented, wait for a future release." 
