@@ -20,6 +20,8 @@ brew install curl git
 cpuHardware=$(sysctl -n machdep.cpu.brand_string | tr '[:upper:]' '[:lower:]')
 # Finds your CPU vendor
 
+echo "In the unlikely case of corruption and/or data loss, the developers of this script are not responsible.\nIt is recommended to make backups before running this script."
+
 case $cpuHardware in
     *"intel"*)
     # Intel Distros
@@ -77,7 +79,10 @@ case $cpuHardware in
         fi ;;
     "nixos"*)
         # Later.
-        echo "NixOS is currently not implemented, wait for a future release." ;;
+        echo "NixOS is currently not implemented, wait for a future release." 
+        if [ $devmode ]; then
+            echo "You need a USB stick plugged in for this one"
+        fi;;
     "rockylinux"*)
         #echo "Rocky Linux is currently not implemented, wait for a future release." 
         echo "Root password for this is rocky" 
