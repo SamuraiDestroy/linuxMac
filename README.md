@@ -22,6 +22,7 @@ Currently none. Likely won't be added for a while.
 Please note that the script currently does not work on M4 CPUs.
 
 - Fedora
+- Alpine Linux
 
 More distros to be fully implemented in the future.
 
@@ -36,4 +37,4 @@ More distros to be fully implemented in the future.
 - Expand to other platforms (This will also require renaming, I suggest LPM)
 - More comments because someone forgot to add them
 - (C++ only) Change from parameter to user input
-- Post install config
+- Post install config (Only for some distros)
