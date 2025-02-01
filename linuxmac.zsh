@@ -113,3 +113,12 @@ case $cpuHardware in
         echo "The distro you have selected currently does not support Apple Silicon (or you misspelled it) and there are currently no plans to implement it." ;;
     esac
 esac
+
+#sudo nvram "recovery-boot-mode=unused"
+# or
+#sudo nvram internet-recovery-mode=RecoveryModeDisk
+# then
+#sudo reboot
+# To boot into recovery mode
+#nvram -d recovery-boot-mode
+# To stop it from continuing to boot into recovery mode
