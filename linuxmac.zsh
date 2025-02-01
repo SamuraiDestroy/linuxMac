@@ -5,19 +5,22 @@ esac
 # Hi Djafar.
 
 devmode=false
+
+if [ $1 == "e" ]; then
+    devmode=true
+fi
 #You didn't see this.
 
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 # Just installs/updates brew bro trust
 
-brew install curl git zsh
+brew install curl git
 # Use brew to install necessary packages
-# If updating zsh this way doesn't work try using the Djafar Case syntax in the other cases or try setting env
 
 cpuHardware=$(sysctl -n machdep.cpu.brand_string)
 # Finds your CPU vendor
 
-case ${cpuHardware,,} in
+case "$cpuHardware:l" in
     *"intel"*)
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release."
@@ -36,7 +39,7 @@ case ${cpuHardware,,} in
     # Apple Silicon Distros
     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
     read distro # Get user input of what distro they want to use
-    case ${distro,,} in 
+    case "$distro:l" in 
     "fedora") 
     # Check if the user input is fedora
 	    echo "Installing fedora..."
@@ -66,7 +69,11 @@ case ${cpuHardware,,} in
         curl https://ci.deepin.com/repo/deepin/deepin-ports/deepin-m1/deepin.install | sh;;
     "gentoo"*)
         # After reading the guide, AAAAAAAAAAAAAA
-        echo "Gentoo is currently not implemented, wait for a future release." ;;
+        echo "Gentoo is currently not implemented, wait for a future release." 
+        if [ $devmode ]; then
+            echo "You need a USB stick plugged in for this one"
+
+        fi ;;
     "nixos"*)
         # Later.
         echo "NixOS is currently not implemented, wait for a future release." ;;
