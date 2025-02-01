@@ -17,10 +17,10 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/in
 brew install curl git
 # Use brew to install necessary packages
 
-cpuHardware=$(sysctl -n machdep.cpu.brand_string)
+cpuHardware=$(sysctl -n machdep.cpu.brand_string | tr '[:upper:]' '[:lower:]')
 # Finds your CPU vendor
 
-case "$cpuHardware:l" in
+case $cpuHardware in
     *"intel"*)
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release."
@@ -39,7 +39,8 @@ case "$cpuHardware:l" in
     # Apple Silicon Distros
     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
     read distro # Get user input of what distro they want to use
-    case "$distro:l" in 
+    distro=$(echo "$distro" | tr '[:upper:]' '[:lower:]')
+    case $distro in 
     "fedora") 
     # Check if the user input is fedora
 	    echo "Installing fedora..."
