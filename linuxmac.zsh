@@ -29,6 +29,11 @@ case $cpuHardware in
     # Intel Distros
     echo "This script currently does not support Intel CPUs, please wait for a future release."
     if [ $devmode = true ]; then # Executes if dev mode is on since this is probably not very safe to test
+        echo "Type the name of the Linux distro do you want to install from the list and press enter[]"
+        read distro
+        distro=$(echo "$distro" | tr '[:upper:]' '[:lower:]')
+        # Gets distro to use from user input
+
         diskutil list
         # Show all the disks and info
         echo "Choose a disk to to install Linux on (Type the identifier next to it and press enter): "
@@ -86,6 +91,7 @@ case $cpuHardware in
         if [ $devmode = true ]; then
             echo "You need a USB stick plugged in for this one"
             sleep 1.5
+            
             git clone https://github.com/tpwrules/nixos-apple-silicon/
             cd nixos-apple-silicon
             nix build --extra-experimental-features 'nix-command flakes' .#m1n1 -o m1n1
