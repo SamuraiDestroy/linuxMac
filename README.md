@@ -22,6 +22,7 @@ Currently none. Likely won't be added for a while.
 Please note that the script currently does not work on M4 CPUs.
 
 - Fedora
+- Alpine Linux
 
 More distros to be fully implemented in the future.
 
