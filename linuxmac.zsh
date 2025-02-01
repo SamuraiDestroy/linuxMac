@@ -6,7 +6,7 @@ esac
 
 devmode=false
 
-if [ $1 == "e" ]; then
+if [ "$1" = "e" ]; then
     devmode=true
 fi
 #You didn't see this.
