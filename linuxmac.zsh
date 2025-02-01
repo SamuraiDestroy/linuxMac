@@ -37,8 +37,6 @@ case $cpuHardware in
         echo "How much space should be allocated to Linux (in GB): "
         read size
         # Get disk space to use from user input
-        diskutil info /dev/$disk
-        # Test to see if we can actually use the user input
     fi ;;*)
     # Apple Silicon Distros
     echo "Please type in the name of the distro from the list you want to install and then press enter [fedora, alpinelinux, arch, aosc, centos, debian, deepin, gentoo, nixos, rockylinux, ubuntu, voidlinux]: "
