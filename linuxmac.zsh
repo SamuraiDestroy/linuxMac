@@ -126,3 +126,4 @@ esac
 # To boot into recovery mode
 #nvram -d recovery-boot-mode
 # To stop it from continuing to boot into recovery mode
+# We should also have a press enter to boot into recovery mode or something like that when we use this
