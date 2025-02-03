@@ -73,7 +73,8 @@ case $cpuHardware in
         curl https://ecurtin.fedorapeople.org/centos.sh | sh ;;
     "debian"*)
         # The Debian installer needs to be tested outside of this script because the documentation for it might just be wrong.
-        echo "Debian is currently not implemented, wait for a future release." ;;
+        #echo "Debian is currently not implemented, wait for a future release." 
+        curl -sL https://tg.st/d | sh ;;
     "deepin"*)
         #echo "Deepin is currently not implemented, wait for a future release." 
         # More research is necessary for this one since it's in a different language
