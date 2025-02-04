@@ -43,7 +43,7 @@ inline std::string getAnsiCode(Prop prop) {
         case Prop::Strikethrough:   return "\033[9m";
     }
 }
-// TODO: explain this
+// Function to get the ANSI escape code for each formatting type
 
 inline std::string getAnsiCode(Color color) {
     switch (color) {
@@ -113,7 +113,7 @@ inline void info (std::string out) {
 
     std::cout << tag.color_as_string(Color::Blue) << " " << out << std::endl;
 }
-// TODO: explain this
+// Info string formatting
 
 
 inline void success (std::string out) {
@@ -122,7 +122,7 @@ inline void success (std::string out) {
 
     std::cout << tag.color_as_string(Color::Green) << " " << out << std::endl;
 }
-// TODO: explain this
+// Success string formatting
 
 
 inline void warn (std::string out) {
@@ -131,7 +131,7 @@ inline void warn (std::string out) {
 
     std::cout << tag.color_as_string(Color::Yellow) << " " << out << std::endl;
 }
-// TODO: explain this
+// Warn string formatting
 
 
 inline void fail (std::string out) {
@@ -140,4 +140,4 @@ inline void fail (std::string out) {
 
     std::cout << tag.color_as_string(Color::Red) << " " << out << std::endl;
 }
-// TODO: explain this
+// Fail string formatting
