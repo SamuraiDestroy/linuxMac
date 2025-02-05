@@ -39,10 +39,9 @@ int main(int argc, char *argv[]) {
     // check for this syntax: ____ install _____
     if (argc > 2 && strcmp(argv[1], "install") == 0) { // TODO: explain this
 
-        // find package name
         ColoredStr pkg (argv[2]);
         pkg += Prop::Bold;
-        // TODO: explain this
+        // find package name
 
         info("installing package " + pkg.color_as_string(Color::BrightMagenta) + "...");
 
@@ -52,7 +51,6 @@ int main(int argc, char *argv[]) {
         // TODO: explain this
 
         switch (stringToDistro(argv[2])) {
-            // switch distro
              case Distro::FEDORA: 
                 install_script = "curl https://alx.sh | sh";
                 break;
