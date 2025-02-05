@@ -4,9 +4,8 @@ A script to setup a bootable linux partition on Macbooks.
 ## Installing and Running
 Installing the script is as easy as possible, just click on the latest release on the right side of your screen and click on the first file to download it.
 
-Once the file is downloaded, double click on it. This will install Fedora onto your mac.
-
-In case you want to install something other than fedora, you may enter the terminal and enter your preferred OS. Currently, the only implemented OS is Fedora, so you need not worry.
+Once the file is downloaded, double click on it. This will install Linux onto your mac.
+If this doesn't work, open a terminal window and run "cd Downloads" followed by "chmod +x linuxmac.zsh"
 
 If the program asks for your password, enter your user password (the one you use to enter your computer).
 
