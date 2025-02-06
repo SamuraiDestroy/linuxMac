@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
         bool distro_is_impl = true;
         std::string install_script;
         std::string extra_info;
-        // TODO: explain this
+        // Creates variables for later use
 
         switch (stringToDistro(argv[2])) {
              case Distro::FEDORA: 
