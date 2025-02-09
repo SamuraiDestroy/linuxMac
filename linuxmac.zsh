@@ -6,7 +6,6 @@ esac
 # Hi Djafar.
 
 devmode=false
-
 if [ "$1" = "e" ]; then
     devmode=true
 fi
