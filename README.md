@@ -30,11 +30,11 @@ More distros to be fully implemented in the future.
 - Add more distros
 - Auto install useful packages? (Research if we can do this or not)
 - A little more output stuff so people know what's going on
-- Github wiki???? I think it would be good for helping people with what to do after installing Linux
+- Github wiki???? I think it would be good for helping people with what to do after installing Linux (WIP)
 - Turn the script into a package??? This would probably give us better output control but it'd be harder for people who are afraid of terminals to use. (WIP currently)
 - Github pages website to make it easier for people to understand??
 - Expand to other platforms (This will also require renaming, I suggest LPM)
-- More comments because someone forgot to add them
+- More comments because someone forgot to add them (WIP)
 - (C++ only) Change from parameter to user input
 - Post install config (Only for some distros)
 - The way we use curl is apparently a security vulnerability and we should fix that

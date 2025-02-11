@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 case "$USER:l" in
     *"djafar"*)
     echo "Hi Djafar"
