@@ -2,7 +2,7 @@
 #include <iostream>
 
 #define RESET "\033[0m"
-// TODO: explain this
+// Clear formatting
 
 enum class Color {
     Black,
