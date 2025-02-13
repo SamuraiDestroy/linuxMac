@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+# This needs testing btw
 
 case "$USER:l" in
     *"djafar"*)
@@ -53,7 +54,15 @@ case $cpuHardware in
     # Check if the user input is fedora
 	    echo "Installing fedora..."
         curl https://alx.sh | sh 
-        echo "Fedora has now been fully configured." ;;
+        echo "Fedora has now been fully configured." 
+        if [ $devmode = true ]; then
+            input="y"
+            echo "Press enter now to boot into recovery mode. Press any other key to cancel."
+            read $input
+            if [ $input = "y" ]; then
+                # TODO
+            fi
+        fi ;;
 	# More distro checking below this haha
     "alpinelinux"*)
         echo "The default user for this is root"
