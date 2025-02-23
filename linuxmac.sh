@@ -57,7 +57,7 @@ case $cpuHardware in
         echo "Fedora has now been fully configured." 
         if [ $devmode = true ]; then
             input="y"
-            echo "Press enter now to boot into recovery mode. Press any other key to cancel."
+            echo "Press y now to boot into recovery mode. Press any other key to cancel."
             read $input
             if [ $input = "y" ]; then
                 # TODO
