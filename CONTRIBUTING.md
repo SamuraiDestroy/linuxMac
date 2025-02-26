@@ -52,10 +52,10 @@ Use this prefix for when you refactor or reformat a piece of code to make it mor
 
 Example: refactor: refactored fileReducer to use enums
 
-## 5. `test`: Adding test
-Use this prefix commits that are test-centered, such as fixing or adding new tests.
+## 5. `remove`: Adding test
+Use this prefix  for commits that remove code or files.
 
-Example: test: added tests for module Editor.tsx
+Example: remove: removed installer.png due to it no longer being needed
 
 ## All in all...
 
